@@ -5,7 +5,7 @@ import "./ProductDetail.css";
 const ProductDetail = () => {
   let { id } = useParams();
   id = Number(id);
-  const { data } = useGlobalContext();
+  const { data, addToCart } = useGlobalContext();
   const shoe = data.filter((product) => product.id === id);
 
   const { name, img, desc, price } = shoe[0];
@@ -39,7 +39,13 @@ const ProductDetail = () => {
                 <div className="text4">DESCRIPTION</div>
                 <div className="text5">{desc}</div>
                 <div className="btn-wrapper">
-                  <button className="btn btn-primary">Add to Cart</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => addToCart(id)}
+                  >
+                    {" "}
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>

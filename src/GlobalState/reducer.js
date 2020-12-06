@@ -71,6 +71,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: tempDCart,
+        isToastOpen: true,
+        toastType: "error",
+        toastMsg: "Item is removed",
       };
 
     case "GET_TOTALS":
