@@ -5,6 +5,7 @@ const reducer = (state, action) => {
         if (cartItem.id === action.payload) {
           return { ...cartItem, totalItem: (cartItem.totalItem += 1) };
         }
+        return 0;
       });
 
       return {
