@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { useToasts } from "react-toast-notifications";
 
 import data from "../shoes.json";
 import reducer from "./reducer";
@@ -14,6 +13,7 @@ const initialState = {
 
   toastMsg: "",
   toastType: "",
+  isToastOpen: false,
 };
 
 const GlobalProvider = ({ children }) => {

@@ -13,7 +13,7 @@ const Toast = ({ msg, toastType, isToastOpen }) => {
         autoDismiss: true,
       });
     }
-  }, [cart]);
+  }, [cart, isToastOpen, msg, addToast, toastType]);
 
   return <></>;
 };
